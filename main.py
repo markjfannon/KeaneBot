@@ -15,8 +15,8 @@ intents.members = True
 client = discord.Client(intents=intents)
 tree = app_commands.CommandTree(client)
 
-token = os.environ('TOKEN')
-MY_GUILD = discord.Object(id=os.environ('MY_GUILD'))
+token = os.environ.get('TOKEN')
+MY_GUILD = discord.Object(id=os.environ.get('MY_GUILD'))
 bot = commands.Bot(command_prefix='./', description="KeaneBot", intents=intents, help_command=None)
 
 
